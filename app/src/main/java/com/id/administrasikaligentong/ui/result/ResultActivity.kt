@@ -17,6 +17,7 @@ import com.id.administrasikaligentong.entity.DocumentEntity
 import com.id.administrasikaligentong.repository.ImpPdfRepository
 import com.id.administrasikaligentong.ui.form.FormActivity
 import com.id.administrasikaligentong.util.State
+import com.jidogoon.pdfrendererview.Quality
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.rendering.ImageType
 import com.tom_roush.pdfbox.rendering.PDFRenderer
@@ -58,11 +59,9 @@ class ResultActivity : AppCompatActivity() {
                 viewModel.cachedPdf.collect { when(val state = it) {
                     is State.Success -> {
                         withContext(Dispatchers.IO) {
-                            val renderer = PDFRenderer(PDDocument.load(state.data))
-                            val bitmap = renderer.renderImage(0, 1F, ImageType.RGB)
                             withContext(Dispatchers.Main) {
                                 binding.progressBar.hide()
-                                binding.ivPdf.setImageBitmap(bitmap)
+                                binding.viewPdf.initWithFile(state.data, Quality.NORMAL)
                             }
                         }
                     }
