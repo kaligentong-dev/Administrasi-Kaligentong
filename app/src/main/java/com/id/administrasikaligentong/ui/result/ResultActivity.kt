@@ -17,10 +17,6 @@ import com.id.administrasikaligentong.entity.DocumentEntity
 import com.id.administrasikaligentong.repository.ImpPdfRepository
 import com.id.administrasikaligentong.ui.form.FormActivity
 import com.id.administrasikaligentong.util.State
-import com.jidogoon.pdfrendererview.Quality
-import com.tom_roush.pdfbox.pdmodel.PDDocument
-import com.tom_roush.pdfbox.rendering.ImageType
-import com.tom_roush.pdfbox.rendering.PDFRenderer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -61,7 +57,7 @@ class ResultActivity : AppCompatActivity() {
                         withContext(Dispatchers.IO) {
                             withContext(Dispatchers.Main) {
                                 binding.progressBar.hide()
-                                binding.viewPdf.initWithFile(state.data, Quality.NORMAL)
+                                binding.viewPdf.fromFile(state.data).show()
                             }
                         }
                     }
