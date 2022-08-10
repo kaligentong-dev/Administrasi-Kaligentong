@@ -3,8 +3,16 @@ package com.id.administrasikaligentong.content
 import com.id.administrasikaligentong.entity.DocumentEntity
 import com.id.administrasikaligentong.entity.DocumentFormEntity
 import com.id.administrasikaligentong.util.InputType
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 object Data {
+
+    private val today = LocalDate.now().format(DateTimeFormatter.ofPattern("dd MMMM yyyy")
+        .withLocale(Locale("in", "ID"))
+    )
+
     val suratKeteranganList = listOf(
         DocumentEntity("Surat Keterangan Umum", "surat_keterangan_umum.pdf", listOf(
             DocumentFormEntity("Nama Lengkap", "nama"),
@@ -18,7 +26,10 @@ object Data {
             DocumentFormEntity("Keperluan", "keperluan"),
             DocumentFormEntity("Berlaku Dari", "berlaku_dari"),
             DocumentFormEntity("Berlaku Hingga", "berlaku_hingga"),
-            DocumentFormEntity("Keterangan lain", "keterangan", inputType = InputType.MultiLine(50))
+            DocumentFormEntity("Keterangan lain", "keterangan", inputType = InputType.MultiLine(50)),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
+            DocumentFormEntity("Nama Pemohon", "nama_pemohon"),
             )),
         DocumentEntity("Surat Keterangan Tidak Mampu", "surat_keterangan_tidak_mampu.pdf", listOf(
             DocumentFormEntity("Nama Lengkap", "nama"),
@@ -32,6 +43,8 @@ object Data {
             DocumentFormEntity("Nomor Surat Keterangan dari Ketua RT", "nomor_surat_rt"),
             DocumentFormEntity("Tanggal Surat Keterangan dari Ketua RT", "tanggal_surat_rt"),
             DocumentFormEntity("Permohonan", "untuk_permohonan", inputType = InputType.MultiLine(70)),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
         )),
         DocumentEntity("Surat Keterangan Usaha", "surat_keterangan_usaha.pdf", listOf(
             DocumentFormEntity("Nama Lengkap", "nama"),
@@ -46,6 +59,8 @@ object Data {
             DocumentFormEntity("Tanggal Surat Keterangan dari Ketua RT/RW", "tanggal_surat_rt_rw"),
             DocumentFormEntity("Usaha Yang Dimiliki", "punya_usaha"),
             DocumentFormEntity("Keperluan Surat Usaha", "keperluan", inputType = InputType.MultiLine(70)),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
         )),
         DocumentEntity("Surat Keterangan Domisili", "surat_keterangan_domisili.pdf", listOf(
             DocumentFormEntity("Nama", "nama"),
@@ -61,7 +76,10 @@ object Data {
             DocumentFormEntity("Nomor", "nomor_surat_rt_rw"),
             DocumentFormEntity("Tanggal", "tanggal_surat_rt_rw"),
             DocumentFormEntity("Keperluan", "keperluan", inputType = InputType.MultiLine(70)),
-        )),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
+            DocumentFormEntity("Nama Pemohon", "nama_pemohon"),
+            )),
         DocumentEntity("Surat Keterangan Domisili Usaha", "surat_keterangan_domisili_usaha.pdf", listOf(
             DocumentFormEntity("Nama Lengkap", "nama"),
             DocumentFormEntity("Jenis Kelamin", "jenis_kelamin"),
@@ -83,6 +101,8 @@ object Data {
             DocumentFormEntity("Luas Tempat Usaha", "luas_tempat_usaha"),
             DocumentFormEntity("Waktu Usaha", "waktu_usaha"),
             DocumentFormEntity("Keperluan Surat Domisili Usaha", "keperluan"),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
             )),
 //        DocumentEntity("Surat Keterangan Domisili Instansi", "", listOf(
 //            DocumentFormEntity("Nama Lengkap"),
@@ -120,8 +140,11 @@ object Data {
             DocumentFormEntity("Keperluan", "keperluan", inputType = InputType.MultiLine(50)),
             DocumentFormEntity("Berlaku Dari", "berlaku_dari"),
             DocumentFormEntity("Berlaku Hingga", "berlaku_hingga"),
-            DocumentFormEntity("Keterangan Lain", "keterangan", inputType = InputType.MultiLine(50))
-        )),
+            DocumentFormEntity("Keterangan Lain", "keterangan", inputType = InputType.MultiLine(50)),
+            DocumentFormEntity("Nama Pemohon", "nama_pemohon"),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
+            )),
         DocumentEntity("Surat Pengantar Ijin Keramaian", "surat_pengantar_ijin_keramaian.pdf", listOf(
             DocumentFormEntity("Nama Lengkap", "nama"),
             DocumentFormEntity("Tempat/Tanggal Lahir", "tempat_tanggal_lahir"),
@@ -140,6 +163,9 @@ object Data {
             DocumentFormEntity("Ketua RT Surat Pernyataan", "ketua_rt"),
             DocumentFormEntity("Nomor Surat Pernyataan", "nomor_surat_rt"),
             DocumentFormEntity("Tanggal Surat Pernyataan", "tanggal_surat_rt"),
+            DocumentFormEntity("Nama Pemohon", "nama_pemohon"),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
         )),
         DocumentEntity("Surat Pengantar SKCK", "surat_pengantar_skck.pdf", listOf(
             DocumentFormEntity("Nama Lengkap", "nama"),
@@ -157,7 +183,10 @@ object Data {
             DocumentFormEntity("No. Reg", "no_reg"),
             DocumentFormEntity("Tanggal SKCK", "tanggal_skck"),
             DocumentFormEntity("Nama Camat Gladagsari", "nama_camat"),
-            DocumentFormEntity("NIP Camat Gladagsari", "nip_camat")
+            DocumentFormEntity("NIP Camat Gladagsari", "nip_camat"),
+            DocumentFormEntity("Nama Pemohon", "nama_pemohon"),
+            DocumentFormEntity("Tanggal Tanda Tangan", "tanggal_ttd", today),
+            DocumentFormEntity("Nama Kepala Desa", "nama_kades"),
         ))
     )
 }

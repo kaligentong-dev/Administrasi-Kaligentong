@@ -1,6 +1,7 @@
 package com.id.administrasikaligentong.util
 
 import android.content.Context
+import android.text.Editable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class DocumentFormAdapter(
             hint = item.fieldDisplayName
             helperText = item.helperText
             with(editText!!) {
+                text = item.fieldValue.toEditable()
                 doAfterTextChanged {
                     item.fieldValue = it.toString()
                 }
@@ -33,6 +35,7 @@ class DocumentFormAdapter(
             hint = item.fieldDisplayName
             helperText = item.helperText
             with(editText!!) {
+                text = item.fieldValue.toEditable()
                 doAfterTextChanged {
                     item.fieldValue = it.toString()
                 }
@@ -60,6 +63,8 @@ class DocumentFormAdapter(
     }
 
     override fun getItemCount(): Int = list.size
+
+    private fun String.toEditable() = Editable.Factory.getInstance().newEditable(this)
 
     fun getList(): List<DocumentFormEntity> = list
 }
