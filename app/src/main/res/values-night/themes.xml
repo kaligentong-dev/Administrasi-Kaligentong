@@ -14,4 +14,9 @@
         <!-- Customize your theme here. -->
         <item name="colorControlNormal">@color/blue_saturated_1</item>
     </style>
+
+    <style name="Theme.AdministrasiKaligentong.CollapsingToolbar" parent="Widget.Design.CollapsingToolbar">
+        <item name="statusBarScrim">@color/night_black</item>
+        <item name="contentScrim">@color/night_black</item>
+    </style>
 </resources>

@@ -30,4 +30,9 @@
         <item name="boxCornerRadiusTopStart">12dp</item>
         <item name="boxCornerRadiusTopEnd">12dp</item>
     </style>
+
+    <style name="Theme.AdministrasiKaligentong.CollapsingToolbar" parent="Widget.Design.CollapsingToolbar">
+        <item name="statusBarScrim">@color/white</item>
+        <item name="contentScrim">@color/white</item>
+    </style>
 </resources>

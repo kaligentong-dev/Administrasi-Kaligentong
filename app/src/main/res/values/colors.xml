@@ -11,6 +11,7 @@
     <color name="dark_blue_saturated_1">#18587A</color>
     <color name="dark_blue_saturated">#31617A</color>
     <color name="dark_blue">#59727A</color>
+    <color name="night_black">#121212</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

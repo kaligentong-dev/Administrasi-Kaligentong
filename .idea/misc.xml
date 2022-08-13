@@ -6,11 +6,12 @@
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/drawable/ic_document.xml" value="0.213" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/drawable/ic_launcher_background.xml" value="0.213" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/drawable/ic_next.xml" value="0.213" />
-        <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/activity_form.xml" value="0.2" />
-        <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/activity_main.xml" value="0.2708089097303634" />
+        <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/activity_form.xml" value="0.4" />
+        <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/activity_result.xml" value="0.2" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/content_main.xml" value="0.240625" />
+        <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/content_main_header.xml" value="0.264" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/item_document.xml" value="0.4" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/item_form_field.xml" value="0.4" />
         <entry key="..\:/Project/KaligentongAdministration/app/app/src/main/res/layout/item_multi_line_field.xml" value="0.536" />

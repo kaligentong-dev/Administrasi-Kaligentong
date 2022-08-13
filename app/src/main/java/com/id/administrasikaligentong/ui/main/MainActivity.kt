@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
             .onEach { shouldShowSplash -> if (shouldShowSplash) showSplash.launch() }
             .launchIn(lifecycleScope)
 
+        setSupportActionBar(binding.toolbar)
+
         with(binding.rvSuratKeterangan) {
             layoutManager = LinearLayoutManager(this@MainActivity)
             setHasFixedSize(true)
