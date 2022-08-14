@@ -35,7 +35,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
-            with(binding.ivAppIcon) {
+            with(binding.cardAppIcon) {
                 startAnimation(AnimationUtils.loadAnimation(this@SplashActivity, R.anim.fade_in))
             }
             delay(2000L)

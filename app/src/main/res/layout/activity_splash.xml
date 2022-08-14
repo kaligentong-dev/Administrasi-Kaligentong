@@ -6,15 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.splash.SplashActivity">
 
-    <ImageView
-        android:id="@+id/iv_app_icon"
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/card_app_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_launcher_background"
+        app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/ic_launcher_background"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_foreground" />
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
