@@ -1,20 +1,17 @@
 package com.id.administrasikaligentong.ui.form
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import com.id.administrasikaligentong.R
 import com.id.administrasikaligentong.databinding.ActivityFormBinding
 import com.id.administrasikaligentong.entity.DocumentEntity
-import com.id.administrasikaligentong.entity.DocumentFormEntity
 import com.id.administrasikaligentong.ui.result.ResultActivity
 import com.id.administrasikaligentong.util.DocumentFormAdapter
-import com.id.administrasikaligentong.util.InputType
 
 class FormActivity : AppCompatActivity() {
 

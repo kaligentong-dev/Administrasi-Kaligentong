@@ -3,7 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_save_pdf"
-        android:title="Simpan"
+        android:id="@+id/action_share_pdf"
+        android:icon="@drawable/ic_share"
+        android:title="Bagikan"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_save_pdf"
+        android:icon="@drawable/ic_save"
+        android:title="Simpan"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_print_pdf"
+        android:icon="@drawable/ic_print"
+        android:title="Cetak"
+        app:showAsAction="always" />
 </menu>
